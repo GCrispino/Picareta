@@ -15,12 +15,12 @@ public class Bloco {
     public enum Tipo{
         PEDRA, PEDREGULHO,TIJOLO, OURO, GELO, 
     }
-    String tipo;
+    private String tipo;
     //variável que indica o tempo que o bloco leva para ser minerado por uma dada picareta
     //para a posição 0, indica o tempo levado por uma picareta de madeira.
     //para a posição 1, para uma picareta de diamante
-    double tempo[];
-    boolean quebrado;
+    private double tempo[];
+    private boolean quebrado;
     
     //construtor que define os tempos de acordo com o tipo de bloco escolhido.
     public Bloco(Tipo tipo){
@@ -76,6 +76,10 @@ public class Bloco {
     
     void setQuebrado(boolean quebrado){
         this.quebrado = quebrado;
+    }
+    
+    boolean quebrado(){
+        return this.quebrado;
     }
     
     @Override

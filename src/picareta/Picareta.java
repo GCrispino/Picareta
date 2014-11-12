@@ -25,8 +25,9 @@ public abstract class Picareta {
     protected boolean quebrado;
     
     //construtor
-    public Picareta(int durabilidade){
+    protected Picareta(int durabilidade){
         this.durabilidade = durabilidade;
+        this.quebrado = false;
     }
     
     //quebra a picareta modificando a variável 'quebrado'
