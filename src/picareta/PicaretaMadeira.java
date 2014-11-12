@@ -17,7 +17,7 @@ public class PicaretaMadeira extends Picareta{
     
     public PicaretaMadeira(){
         //através do construtor da superclasse define a durabilidade da picareta de madeira
-        super(3);
+        super(60);
     }
     
     //sobrescrita do metodo "quebrarBloco"
