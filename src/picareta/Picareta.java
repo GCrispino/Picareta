@@ -6,6 +6,9 @@
 
 package picareta;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Crispino
@@ -22,7 +25,7 @@ public abstract class Picareta {
     protected boolean quebrado;
     
     //construtor
-    Picareta(int durabilidade){
+    public Picareta(int durabilidade){
         this.durabilidade = durabilidade;
     }
     
@@ -36,4 +39,7 @@ public abstract class Picareta {
     }
     
     public abstract void quebrarBloco(Bloco B);
+    
+    @Override
+    public abstract String toString();
 }
