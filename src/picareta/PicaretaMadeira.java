@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+//Subclasse que representa o tipo específico de picareta feita de madeira
 package picareta;
 
+import Classes_associadas.Bloco;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,8 +26,11 @@ public class PicaretaMadeira extends Picareta{
         
         System.out.println("O " + B + " esta sendo quebrado: ");
         try {
-            //pausa o programa pelo tempo que a picareta leva para quebrar o bloco dado.
-            Thread.sleep((long) (B.getTempo1() * 1000));
+            for (int i = 0;i < 5;i++){
+                System.out.println("...");
+                //pausa o programa pelo tempo que a picareta leva para quebrar o bloco dado.
+                Thread.sleep((long) ((B.getTempo2() * 1000)/5));
+            }
         } catch (InterruptedException ex) {
             Logger.getLogger(PicaretaMadeira.class.getName()).log(Level.SEVERE, null, ex);
         }
