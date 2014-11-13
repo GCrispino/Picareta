@@ -5,7 +5,6 @@
  */
 
 package main;
-
 import Classes_associadas.Personagem;
 import Classes_associadas.Bloco;
 import java.io.IOException;

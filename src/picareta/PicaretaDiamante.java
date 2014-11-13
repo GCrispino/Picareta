@@ -17,6 +17,10 @@ public class PicaretaDiamante extends Picareta{
         //através do construtor da superclasse define a durabilidade da picareta de madeira
         super(1563);
     }
+    //construtor de cópia
+    public PicaretaDiamante(PicaretaDiamante Pd){
+        super(Pd);
+    }
     
     //sobrescrita do metodo "quebrarBloco"
     @Override

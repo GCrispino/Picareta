@@ -25,6 +25,11 @@ public abstract class Picareta {
         this.durabilidade = durabilidade;
         this.quebrado = false;
     }
+    //construtor de cópia
+    protected Picareta(Picareta p){
+        this.durabilidade = p.durabilidade;
+        this.quebrado = p.quebrado;
+    }
     
     //quebra a picareta modificando a variável 'quebrado'
     public void quebrarPicareta(){
@@ -33,6 +38,10 @@ public abstract class Picareta {
     
     public boolean quebrado(){
         return this.quebrado;
+    }
+    
+    public void setQuebrado(boolean quebrado){
+        this.quebrado = quebrado;
     }
     
     public abstract void quebrarBloco(Bloco B);
