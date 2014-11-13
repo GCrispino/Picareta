@@ -15,6 +15,7 @@ Todos os atributos e funções membros devem estar relacionados a classe
 2. Pelo menos 4 funções membros sem incluir get e set
 
 Requisitos de implementação
+
 3. Cinco classes: uma superclasse e duas subclasses, e duas classes relacionadas ao projeto
 4. Sempre usar o super para o máximo de reaproveitamento de código
 5. Diagrama de classes (obrigatório salvar também o png do diagrama no gitHub) 
