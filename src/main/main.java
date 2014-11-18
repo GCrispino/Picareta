@@ -101,92 +101,97 @@ public class Main {
         Personagem principal = new Personagem();
         ArrayList <Bloco> listabloco = new ArrayList<>();
         int opcao,nbloco;
+        Bloco.Tipo tipo = Bloco.Tipo.OURO;
         
-        geraArrayBlocos(listabloco);
+        Bloco B = new Bloco(tipo);
         
-        mensagemPadrao();
+        System.out.println(B);
         
-        do{
-            Menu1();
-            opcao = input.nextInt();
-        
-            switch(opcao){
-                case 1:
-                    principal = principal.criarPersonagem();
-                    break;
-                case 2:
-                    System.out.println("Programa encerrado!");
-                    break;
-                default:
-                    System.out.println("Opcao invalida!");
-                    try {
-                        System.in.read();
-                    } catch (IOException ex) {
-                        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-            }
-        }while(opcao != 1 && opcao != 2);
-        
-        if (opcao == 1){
-            do{
-                MenuPrincipal();
-                opcao = input.nextInt();
-                
-                switch(opcao){
-                    case 1:
-                        if (principal.getPicaretaAtual() == null){
-                            System.out.println("O personagem "+ principal + " não possui nenhuma picareta!");
-                            System.out.println("Para jogar é necessário ter pelo menos uma picareta no inventário!");
-                            try {
-                               System.in.read();
-                            } catch (IOException ex) {
-                                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                            }
-                        }
-                        else{
-                            verificaArrayBlocos(listabloco);
-                            
-                            if (listabloco.isEmpty()){
-                                System.out.println("Não há nenhum bloco disponível!");
-                                try {
-                                    System.in.read();
-                                } catch (IOException ex) {
-                                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                                }
-                            }
-                            else{
-                                System.out.println("Escolha um bloco para quebrar: ");
-                                imprimeArrayBlocos(listabloco);
-                                nbloco = input.nextInt();
-                                //quebra o bloco escolhido utilizando a picareta atual do personagem.
-                                principal.getPicaretaAtual().quebrarBloco(listabloco.get(nbloco - 1));
-                                try {
-                                    System.in.read();
-                                } catch (IOException ex) {
-                                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                                }
-                            }
-                        }
-                        break;
-                    case 2:
-                        principal.adicionarPicareta();
-                        break;
-                    case 3:
-                        principal.modificarPicaretaAtual();
-                        break;
-                    case 4:
-                        System.out.println("Programa encerrado!");
-                        break;
-                    default:
-                        System.out.println("Opcao invalida!");
-                        try {
-                          System.in.read();
-                        } catch (IOException ex) {
-                            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                }
-            }while(opcao != 4);
-        }
+//        geraArrayBlocos(listabloco);
+//        
+//        mensagemPadrao();
+//        
+//        do{
+//            Menu1();
+//            opcao = input.nextInt();
+//        
+//            switch(opcao){
+//                case 1:
+//                    principal = principal.criarPersonagem();
+//                    break;
+//                case 2:
+//                    System.out.println("Programa encerrado!");
+//                    break;
+//                default:
+//                    System.out.println("Opcao invalida!");
+//                    try {
+//                        System.in.read();
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//            }
+//        }while(opcao != 1 && opcao != 2);
+//        
+//        if (opcao == 1){
+//            do{
+//                MenuPrincipal();
+//                opcao = input.nextInt();
+//                
+//                switch(opcao){
+//                    case 1:
+//                        if (principal.getPicaretaAtual() == null){
+//                            System.out.println("O personagem "+ principal + " não possui nenhuma picareta!");
+//                            System.out.println("Para jogar é necessário ter pelo menos uma picareta no inventário!");
+//                            try {
+//                               System.in.read();
+//                            } catch (IOException ex) {
+//                                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+//                            }
+//                        }
+//                        else{
+//                            verificaArrayBlocos(listabloco);
+//                            
+//                            if (listabloco.isEmpty()){
+//                                System.out.println("Não há nenhum bloco disponível!");
+//                                try {
+//                                    System.in.read();
+//                                } catch (IOException ex) {
+//                                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+//                                }
+//                            }
+//                            else{
+//                                System.out.println("Escolha um bloco para quebrar: ");
+//                                imprimeArrayBlocos(listabloco);
+//                                nbloco = input.nextInt();
+//                                //quebra o bloco escolhido utilizando a picareta atual do personagem.
+//                                principal.getPicaretaAtual().quebrarBloco(listabloco.get(nbloco - 1));
+//                                try {
+//                                    System.in.read();
+//                                } catch (IOException ex) {
+//                                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+//                                }
+//                            }
+//                        }
+//                        break;
+//                    case 2:
+//                        principal.adicionarPicareta();
+//                        break;
+//                    case 3:
+//                        principal.modificarPicaretaAtual();
+//                        break;
+//                    case 4:
+//                        System.out.println("Programa encerrado!");
+//                        break;
+//                    default:
+//                        System.out.println("Opcao invalida!");
+//                        try {
+//                          System.in.read();
+//                        } catch (IOException ex) {
+//                            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+//                        }
+//                }
+//            }while(opcao != 4);
+//        }
         
     }
 }
